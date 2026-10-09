@@ -99,6 +99,9 @@ button {
     color:var(--green);
     font-weight:700
 }
+.mobile-find-us {
+    display:none
+}
 .header-cta {
     display:flex;
     align-items:center;
@@ -107,7 +110,6 @@ button {
 }
 .text-cta {
     color:#596150
-    margin-right: 100px;
 }
 .button {
     display:inline-flex;
@@ -1036,6 +1038,9 @@ button {
     .nav a {
         padding:13px 0;
         border-bottom:1px solid var(--line)
+    }
+    .nav .mobile-find-us {
+        display:block
     }
     .hero {
         height:600px;
