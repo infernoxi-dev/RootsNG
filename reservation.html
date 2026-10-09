@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>Reserve a Table — Roots Restaurant & Café</title>
+    <link href="style.css" rel="stylesheet">
+    <script defer="" src="script.js"></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <span>GOOD FOOD. GOOD COMPANY.</span>
+      <span>OPEN DAILY · 9AM – 8PM</span>
+    </div>
+    <header class="header">
+      <a class="logo" href="index.html">
+        <span class="logo-leaf">r</span>
+        <span>
+          roots
+          <small>RESTAURANT & CAFÉ</small>
+        </span>
+      </a>
+      <button aria-expanded="false" aria-label="Open menu" class="menu-toggle">
+        <i></i>
+        <i></i>
+        <i></i>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Our Menu</a>
+        <a href="location.html">Locations</a>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a class="text-cta" href="location.html">Find us</a>
+        <a class="button button-dark" href="reservation.html">
+          Book a table
+          <span>↗</span>
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="kicker">
+          <span></span>
+          YOUR TABLE IS WAITING
+        </div>
+        <h1>
+          Make room for
+          <br>
+          <em>a good time.</em>
+        </h1>
+        <p>Tell us a little about your visit. We'll prepare your reservation request.</p>
+      </section>
+      <section class="section reservation-section">
+        <form class="reservation-form" id="reservation-form">
+          <h2>Reserve your table</h2>
+          <p class="form-intro">Share your plans and preferred Roots location.</p>
+          <div class="reservation-grid">
+            <label>
+              Full name
+              <input name="name" placeholder="Your name" required="">
+            </label>
+            <label>
+              Phone number
+              <input name="phone" placeholder="080 0000 0000" required="" type="tel">
+            </label>
+            <label>
+              Email address
+              <input name="email" placeholder="you@example.com" required="" type="email">
+            </label>
+            <label>
+              Restaurant location
+              <select name="location" required="">
+                <option value="">Choose a location</option>
+                <option>Aba — Factory Road</option>
+                <option>Enugu — Independence Layout</option>
+                <option>Umuahia — Secretarial Road</option>
+              </select>
+            </label>
+            <label>
+              Reservation date
+              <input name="date" required="" type="date">
+            </label>
+            <label>
+              Preferred time
+              <select name="time" required="">
+                <option value="">Choose a time</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+                <option>6:00 PM</option>
+                <option>7:00 PM</option>
+              </select>
+            </label>
+            <label>
+              Number of guests
+              <select name="guests" required="">
+                <option value="">Select guests</option>
+                <option>1 person</option>
+                <option>2 people</option>
+                <option>3 people</option>
+                <option>4 people</option>
+                <option>5 people</option>
+                <option>6 people</option>
+                <option>7+ people</option>
+              </select>
+            </label>
+            <label class="full-field">
+              Anything we should know?
+              <textarea name="notes" placeholder="Special occasion, seating preference, or other notes" rows="4"></textarea>
+            </label>
+          </div>
+          <button class="button button-green" type="submit">
+            Send reservation request
+            <span>↗</span>
+          </button>
+          <p class="form-note">Demo only: this form doesn't send to Roots or confirm a table. Please contact the restaurant directly to make a real reservation.</p>
+        </form>
+        <aside class="reservation-aside">
+          <div class="reservation-aside-image"></div>
+          <div class="kicker">
+            <span></span>
+            WE LOOK FORWARD TO SEEING YOU
+          </div>
+          <h3>
+            Good food is
+            <br>
+            <em>better together.</em>
+          </h3>
+          <p>For private events or booking questions, contact our team.</p>
+          <a href="mailto:customercare@rootsng.com">customercare@rootsng.com ↗</a>
+          <a href="tel:+2349062980526">+234 906 298 0526</a>
+          <small>Typical hours shown on the website: 9am – 8pm daily. Confirm directly with your selected branch.</small>
+        </aside>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-main">
+        <a class="logo" href="index.html">
+          <span class="logo-leaf">r</span>
+          <span>
+            roots
+            <small>RESTAURANT & CAFÉ</small>
+          </span>
+        </a>
+        <p>
+          Made with heart.
+          <br>
+          Served with joy.
+        </p>
+        <div class="footer-links">
+          <a href="menu.html">Our menu</a>
+          <a href="location.html">Locations</a>
+          <a href="about.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="careers.html">Careers</a>
+          <a href="reservation.html">Reservations</a>
+        </div>
+        <div class="footer-contact">
+          <b>Let's talk</b>
+          <a href="tel:+2349062980526">+234 906 298 0526</a>
+          <a href="mailto:customercare@rootsng.com">customercare@rootsng.com</a>
+          <a href="contact.html">Contact our team ↗</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Roots Restaurant & Café.</span>
+        <span>Good food brings us together.</span>
+        <a href="https://www.rootsng.com/location" rel="noopener" target="_blank">Visit original website ↗</a>
+      </div>
+    </footer>
+    <div aria-live="polite" class="toast" role="status"></div>
+  </body>
+</html>
