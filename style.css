@@ -1796,3 +1796,67 @@ body {
         font-size:9px
     }
 }
+
+
+/* Polished navigation underline and subtle entrance animations */
+.nav a {
+    position:relative;
+    text-decoration:none;
+}
+.nav a::after {
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:7px;
+    height:1px;
+    background:var(--green);
+    transform:scaleX(0);
+    transform-origin:left center;
+    transition:transform .24s ease;
+}
+.nav a:hover::after,
+.nav a:focus-visible::after,
+.nav a.active::after {
+    transform:scaleX(1);
+}
+.nav a:focus-visible {
+    outline:2px solid var(--green);
+    outline-offset:4px;
+}
+.button, .category-card, .blog-card, .location-card, .content-card {
+    transition:transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+.category-card:hover, .blog-card:hover, .location-card:hover, .content-card:hover {
+    transform:translateY(-3px);
+}
+.js-motion .motion-reveal {
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity .65s ease, transform .65s cubic-bezier(.2,.65,.3,1);
+}
+.js-motion .motion-reveal.is-visible {
+    opacity:1;
+    transform:translateY(0);
+}
+.hero-content {
+    animation:rootsHeroEnter .8s ease-out both;
+}
+@keyframes rootsHeroEnter {
+    from { opacity:0; transform:translateY(14px); }
+    to { opacity:1; transform:translateY(0); }
+}
+@media (prefers-reduced-motion:reduce) {
+    html { scroll-behavior:auto; }
+    .nav a::after { transition:none; }
+    .hero-content { animation:none; }
+    .js-motion .motion-reveal,
+    .js-motion .motion-reveal.is-visible {
+        opacity:1;
+        transform:none;
+        transition:none;
+    }
+    .button, .category-card, .blog-card, .location-card, .content-card {
+        transition:none!important;
+    }
+}

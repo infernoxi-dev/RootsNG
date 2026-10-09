@@ -1,5 +1,29 @@
 (() => {
   const $ = (s, root=document) => root.querySelector(s);
+
+  // Reveal selected content gently as it enters the viewport. Content remains
+  // visible by default if IntersectionObserver is not supported.
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('js-motion');
+    const revealTargets = document.querySelectorAll(
+      '.hero-content, .page-banner, .page-content > *, .category-card, .blog-card, .location-card, .content-card, .contact-item, .footer-main > *'
+    );
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+    revealTargets.forEach((element, index) => {
+      element.classList.add('motion-reveal');
+      if (element.matches('.category-card, .blog-card, .location-card, .content-card')) {
+        element.style.transitionDelay = `${(index % 4) * 70}ms`;
+      }
+      revealObserver.observe(element);
+    });
+  }
   const toast = message => {
     const el = $('.toast');
     if (!el) return;
